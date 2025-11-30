@@ -1,10 +1,11 @@
 <#
-    Install Tools
+  Install Tools
 #>
 
 python.exe -m pip install --upgrade pip
 pip install uv
-pip install black
-pip install isort
-pip install ruff
 
+# Use UV to Install Tools
+uv tool install black
+uv tool install isort
+uv tool install ruff

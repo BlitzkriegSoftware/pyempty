@@ -3,9 +3,17 @@
 Empty Python Project Structure + Tools for a Quick Consistant Start
 
 - [py empty](#py-empty)
+  - [Motivation](#motivation)
   - [Credits](#credits)
   - [Setting up for python](#setting-up-for-python)
   - [For your project](#for-your-project)
+  - [Sidebar: Generating a pip compatible requirements files](#sidebar-generating-a-pip-compatible-requirements-files)
+
+## Motivation
+
+- We got tired when jumping for project to project, language to language, etc. in stuggling to remember things
+- We wanted a based of standards the whole team could agree on and have be enforced
+- We wanted a set of scripts to help out, even for stuff we "should" remember, in order to cut down on "oogling" time
 
 ## Credits
 
@@ -71,3 +79,11 @@ pip 25.2
 3. Create our virtual environment with `scripts\new-venv.ps1` which scrubs away old versions and installs and activates a clean one (see previous comment)
 
 4. make basic `uv.lock` file using `scripts\add-uvstds.ps1` with tools configured
+
+## Sidebar: Generating a pip compatible requirements files
+
+Sometimes a tool needs a pip `requirements.txt` file, this script generates one
+
+```powershell
+scripts\convert-uvlock2pip.ps1
+```
