@@ -416,3 +416,23 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+######## STD ABOVE THIS LINE, CUSTOM BELOW IT ########
+
+#
+# Python Specific
+#
+
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyd
+*.egg
+*.egg-info/
+.vscode/
+.env
+*.log
+htmlcov/
+coverage.json
