@@ -1,6 +1,11 @@
 # py empty
 
-Empty Python Project Structure
+Empty Python Project Structure + Tools for a Quick Consistant Start
+
+- [py empty](#py-empty)
+  - [Credits](#credits)
+  - [Setting up for python](#setting-up-for-python)
+  - [For your project](#for-your-project)
 
 ## Credits
 
@@ -52,6 +57,8 @@ pip 25.2
 .\scripts\install-tools.ps1
 ```
 
+6. Install Python Extensions required by our team (`scripts\install-python-extensions.ps1`) plus any others we like as individuals
+
 ## For your project
 
 1. Make your code folder and populate it from the repo
@@ -61,6 +68,6 @@ pip 25.2
 
 2. Copy guts of this project into it as a template
 
-3. Install Python Extensions required by our team (`scripts\install-python-extensions.ps1`) plus any others we like as individuals
+3. Create our virtual environment with `scripts\new-venv.ps1` which scrubs away old versions and installs and activates a clean one (see previous comment)
 
-4. Create our virtual environment with `scripts\new-venv.ps1` which scrubs away old versions and installs and activates a clean one (see previous comment)
+4. make basic `uv.lock` file using `scripts\add-uvstds.ps1` with tools configured

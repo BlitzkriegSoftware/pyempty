@@ -437,3 +437,4 @@ __pycache__/
 htmlcov/
 coverage.json
 requirements.txt
+README.html
