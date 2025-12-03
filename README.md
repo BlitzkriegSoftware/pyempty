@@ -3,17 +3,26 @@
 Empty Python Project Structure + Tools for a Quick Consistant Start
 
 - [py empty](#py-empty)
-  - [Motivation](#motivation)
+  - [Motivations](#motivations)
   - [Credits](#credits)
   - [Setting up for python](#setting-up-for-python)
   - [For your project](#for-your-project)
   - [Sidebar: Generating a pip compatible requirements files](#sidebar-generating-a-pip-compatible-requirements-files)
+- [Contributing and Issues](#contributing-and-issues)
 
-## Motivation
+## Motivations
 
 - We got tired when jumping for project to project, language to language, etc. in stuggling to remember things
-- We wanted a based of standards the whole team could agree on and have be enforced
+
+- We wanted a based of standards the whole team could agree on and have be enforced, especially code/folder structure
+
 - We wanted a set of scripts to help out, even for stuff we "should" remember, in order to cut down on "oogling" time
+
+- `pip` is ok, but `uv` is so much better, so this is centric around that
+
+- Best practices enforced by tools is table stakes for us, so want to ensure everyone has and uses tools (See: `pre-commit-config.yaml`)
+
+- We encourge and for our shop enforce [SOLID](https://en.wikipedia.org/wiki/SOLID), and [12-Factor](https://12factor.net/) so a mix of required tools added as `--dev` and standard libraries such as `dotenv` to enforce getting configuration from environment variables.
 
 ## Credits
 
@@ -22,7 +31,7 @@ Thanks to Arjan Codes! For lots of Great content and as a starting place for man
 - [GitHub](https://github.com/ArjanCodes)
 - [Site](https://www.arjancodes.com/)
 
-> If it is right, he gets the credit, if it is wrong, that's on me.
+> If it is right, he gets the credit, if it is wrong, that's on us (well mostly me...).
 
 This is modified to suit my team's quirks and preferences.
 
@@ -41,8 +50,10 @@ code --version
 1.106.1
 cb1933bbc38d329b3595673a600fab5c7368f0a7
 x64
-# 1. Version, 2. Checksum, 3. Processor Target
 ```
+
+- Lines: 1. Version, 2. Checksum, 3. Processor Target
+- We try to keep this updated weekly!
 
 3. [Install Python](https://www.python.org/downloads/)
    a. We always agree on the "pinned" version of python to use
@@ -65,9 +76,11 @@ pip 25.2
 .\scripts\install-tools.ps1
 ```
 
-6. Install Python Extensions required by our team (`scripts\install-python-extensions.ps1`) plus any others we like as individuals
+6. Install Python Extensions for VS CODE required by our team (`scripts\install-python-extensions.ps1`) plus any others we like as individuals
 
 ## For your project
+
+> Note: If you copy the files from this repo into a new project to `seed` it, `cd {my project}`, then run `uv sync` it will handle many of these details for you.
 
 1. Make your code folder and populate it from the repo
    a. For our projects its always `c:\code` on Windows or `~/code` on Linux.
@@ -89,3 +102,7 @@ Sometimes a tool needs a pip `requirements.txt` file, this script generates one
 ```powershell
 scripts\convert-uvlock2pip.ps1
 ```
+
+# Contributing and Issues
+
+Please do make an issue, or send us a Pull-Request if you have suggestions or want to report a bug.
