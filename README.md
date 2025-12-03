@@ -80,6 +80,8 @@ pip 25.2
 
 4. make basic `uv.lock` file using `scripts\add-uvstds.ps1` with tools configured
 
+5. remember to `uv sync` at intervals or when pulling fresh from source control
+
 ## Sidebar: Generating a pip compatible requirements files
 
 Sometimes a tool needs a pip `requirements.txt` file, this script generates one
