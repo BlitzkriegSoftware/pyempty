@@ -10,6 +10,8 @@ RUN sh /uv-installer.sh && rm /uv-installer.sh
 # Ensure the installed binary is on the `PATH`
 ENV PATH="/root/.local/bin/:$PATH"
 
+ENV PORT=8080
+
 WORKDIR  /app
 COPY ./pyproject.toml /app
 COPY ./.python-version /app
