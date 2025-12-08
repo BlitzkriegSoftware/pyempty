@@ -17,3 +17,6 @@ COPY ./src /app
 
 RUN uv sync 
 
+# EXPOSE {ports} 
+
+CMD ["uv","run","main.py"]
