@@ -49,6 +49,9 @@ if (Test-Path $gitR -PathType Container) {
     [string]$dbPath = Join-Path -Path $gitR -ChildPath "data"
 
     if ($DoRun) {
+
+        Write-Output "Starting ${IMAGENAME}"
+        
         # Dispose of any old running containers
         $null = (docker stop "${IMAGENAME}") 2> $null
         $null = (docker rm "${IMAGENAME}") 2> $null

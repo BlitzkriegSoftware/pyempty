@@ -21,4 +21,4 @@ RUN uv sync
 
 # EXPOSE {ports} 
 
-CMD ["uv","run","main.py"]
+CMD ["uv","run","webserver.py"]
