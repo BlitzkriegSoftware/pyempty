@@ -7,6 +7,7 @@ Empty Python Project Structure + Tools for a Quick Consistant Start
   - [Credits](#credits)
   - [Setting up for python](#setting-up-for-python)
   - [For your project](#for-your-project)
+  - [Run the tests with coverage](#run-the-tests-with-coverage)
   - [Sidebar: Generating a pip compatible requirements files](#sidebar-generating-a-pip-compatible-requirements-files)
 - [Contributing and Issues](#contributing-and-issues)
 
@@ -94,6 +95,12 @@ pip 25.2
 4. make basic `uv.lock` file using `scripts\add-uvstds.ps1` with tools configured
 
 5. remember to `uv sync` at intervals or when pulling fresh from source control
+
+## Run the tests with coverage
+
+```powershell
+uv run pytest --cov=./src
+```
 
 ## Sidebar: Generating a pip compatible requirements files
 
