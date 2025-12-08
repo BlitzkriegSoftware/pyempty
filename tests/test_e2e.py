@@ -7,8 +7,8 @@ from webserver import app
 
 client = TestClient(app)
 
-@pytest.mark.api
+@pytest.mark.integration
 def test_read_main():
-    response = client.get("/")                          # type: ignore
-    assert response.status_code == 200                  # type: ignore
-    assert response.json() == {"message": "Hello, World!"}    # type: ignore
+    response = client.get("/")                                
+    assert response.status_code == 200                       
+    assert response.json() == {"message": "Hello, World!"}   
