@@ -3,7 +3,12 @@
 #>
 
 python.exe -m pip install --upgrade pip
-pip install uv
+
+# Download and install UV
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+# Force UV to be in path
+$env:Path = "C:\Users\spook\.local\bin;$env:Path"
 
 # Force update
 uv self update
