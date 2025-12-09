@@ -12,6 +12,5 @@ listenPort = int(os.getenv("PORT", default="8080"))
 async def read_root():
     return {"message": "Hello, World!"}
 
-# pragma: no cover
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port= listenPort, log_level="info")
+    uvicorn.run(app, host="0.0.0.0", port= listenPort, log_level="info") # pragma: no cover
