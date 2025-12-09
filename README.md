@@ -99,7 +99,7 @@ pip 25.2
 ## Run the tests with coverage
 
 ```powershell
-uv run pytest --cov=./src
+uv run pytest --cov=./src --cov-report=html
 ```
 
 ## Sidebar: Generating a pip compatible requirements files
